@@ -1,26 +1,23 @@
-<main role="main" class="main container">
-	<header>
-		<div class="breadcrumbs">
-		<a href="#">Home</a> / {{ title }}
+<div class="breadcrumbs">
+	<a href="#">Home</a> / VolksWagen DriverGear
+</div>
+<div class="banner-wrapper">
+	<div class="banner">
+		<div class="banner-title">
+			<h1>{{ title }}</h1>
+			<p>{{ desc }}</p>
 		</div>
-		<div class="banner">
-			<div>
-				<h1>{{ title }}</h1>
-				<p>{{ desc }}</p>
-			</div>
-			<div>
-				<img src="" alt="">
-			</div>
+		<div class="banner-image">
+			<img src="/assets/hero-gear.jpg" alt="">
 		</div>
-	</header>
-	<div class="container tile-wrapper">
-
-		{{> tile img="/dog.jpg" name="static" }}
+	</div>
+</div>
+<main role="main" class="main category-page">
+	<div class="tile-wrapper">
 		
 		{{#each categories}}
 		{{> tile }}
 		{{/each}}
-
 
 	</div>
 </main>

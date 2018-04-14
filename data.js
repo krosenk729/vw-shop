@@ -2,37 +2,37 @@ const categories = {
 	headwear: {
 		name: 'Headwear',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-headwear.png'
 	},
 	kids: {
 		name: 'Kids',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-kids.png'
 	},
 	ladies: {
 		name: 'Ladies',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-ladies.png'
 	},
 	lifestyle: {
 		name: 'Lifestyle',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-lifestyle.png'
 	},
 	mens: {
 		name: 'Mens',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-mens.png'
 	},
 	modelcars: {
 		name: 'Model Cars',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-modelcars.png'
 	},
 	sport: {
 		name: 'Sport',
 		dest: '#',
-		img: '/hat.jpg'
+		img: '/assets/tile-sport.png'
 	}
 };
 

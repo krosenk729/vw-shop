@@ -1,26 +1,30 @@
-<header>
-	<div>
-		<img src="" alt="">
+<header class="site-header">
+	<img class="brand-logo" src="/assets/logo.png" alt="">
+	<div class="address-wrapper">
+		<h4>{{ address.name }}</h4>
 		<div>
-			{{ address.name }}
-			{{ address.street }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}
-			{{ address.phone }}
-			{{ address.email }}
+		<i class="fas fa-map-marker-alt"></i>{{ address.street }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}
+		<i class="fas fa-phone"></i>{{ address.phone }}
+		<i class="fas fa-envelope"></i>{{ address.email }}
 		</div>
-		<fieldset>
-			Search...
-		</fieldset>
 	</div>
-	<nav>
-		<div>
-			<a href="#" class="upper">Select Vehicle</a>
-			<a href="#" class="upper">Parts</a>
-			<a href="#" class="upper">Accessories</a>
-			<a href="#" class="upper">VW DriverGear</a>
-			<a href="#" class="upper">Dealer Login</a>
-		</div>
-		<div>
-			cart icon
-		</div>
-	</nav>
+	<fieldset>
+		<label for="search-box">
+		<i class="fas fa-search"></i>
+		<span class="sr-only">Search</span>
+		<input type="text" name="search" id="search-box" placeholder="Search">
+		</label>
+	</fieldset>
 </header>
+<nav class="site-nav">
+	<div class="navbar">
+		<a href="#" class="upper">Select Vehicle <i class="fas fa-chevron-down"></i></a>
+		<a href="#" class="upper">Parts <i class="fas fa-chevron-down"></i></a>
+		<a href="#" class="upper">Accessories</a>
+		<a href="#" class="upper">VW DriverGear</a>
+		<a href="#" class="upper">Dealer Login</a>
+	</div>
+	<div class="navcart">
+		<i class="fas fa-shopping-cart"></i> 0
+	</div>
+</nav>
