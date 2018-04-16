@@ -1,0 +1,272 @@
+$c-white-o: #F1F5F6;
+$c-white-p: #FFFFFF;
+$c-black-o: #2C2D32;
+$c-black-p: #000000;
+$c-blue-m: #1874B7;
+$c-grey-m: #9eaab0;
+
+// ==========================================
+// Utility Classes
+
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+* {
+	font-family: 'Work Sans', sans-serif;
+	line-height: 1.2;
+	box-sizing: border-box;
+}
+
+%screen{
+	margin: 0 auto;
+	width: 100%;
+	padding-left: 2em;
+	padding-right: 2em;
+
+	@media screen and (min-width: 900px) {
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+	@media screen and (min-width: 1400px) {
+		padding-left: 6em;
+		padding-right: 6em;
+	}
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	background: $c-white-o;
+	color: $c-black-o;
+}
+
+// ==========================================
+// Utility Classes
+
+.upper{
+	text-transform: uppercase;
+}
+
+%flex-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+%flex-column{
+	display: flex;
+	flex-direction: column;
+}
+
+// ==========================================
+// Header
+
+fieldset{
+	input[type="text"]{
+		border: transparent;
+		background: transparent;
+		padding: .25em;
+		width: 80%;
+
+		&:focus{
+			outline: none;
+			border-bottom: 1px solid $c-grey-m;
+		}
+
+	}
+}
+
+header.site-header{
+	@extend %screen;
+	@extend %flex-between;
+	align-items:center;
+
+	margin-top: 16px;
+	background: $c-white-p;
+
+	img{ 
+		height: 65px;
+		margin: .65em;
+	}
+
+	.address-wrapper{
+		flex-basis: 100%;
+		@extend %flex-column;
+
+		div{
+			padding: .25em;
+		}
+
+		i{
+			color: $c-blue-m;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	}	
+}
+
+.breadcrumbs{
+	@extend %screen;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	color: lighten($c-black-o, 15%);
+
+	font-weight: bold;
+}
+
+// ==========================================
+// Nav Bars
+
+.site-nav{
+	@extend %screen;
+	@extend %flex-between;
+
+	background: $c-blue-m;
+	color: $c-white-p;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	a{
+		color: $c-white-p;
+		padding-right: 1.7em;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.navcart{
+		border-left: 1px solid $c-white-p;
+		border-right: 1px solid $c-white-p;
+
+		margin-top: -1em;
+		margin-bottom: -1em;
+		padding: 1em;
+	}
+}
+
+// ==========================================
+// Main & Category Tiles
+.banner-wrapper{
+	@extend %screen;
+	overflow: hidden;
+
+	background: $c-blue-m;
+	color: $c-white-o;
+
+	.banner{
+		@extend %flex-between;
+	}
+
+	.banner-title{
+		flex-basis: 50%;
+		align-self: center;
+		padding: 1em;
+	}
+
+	.banner-image{
+		flex-basis: 50%;
+		max-width: 715px;
+		img{
+			margin-bottom: -1em;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+main, .main{
+	@extend %screen;
+}
+
+.tile-wrapper{
+	display: flex;
+	justify-content: stretch;
+	flex-wrap: wrap;
+
+	max-width: 1100px;
+	margin: 1em auto 2em auto;
+
+	.tile{
+		background: $c-white-p;
+		background-size: cover;
+		background-position: center right;
+		background-repeat: no-repeat;
+
+		flex-basis: 32%;
+		flex-grow: 1;
+		border: 0;
+		margin: 4px;
+		height: 250px;
+		// min-height: 110vh;
+
+		&:nth-of-type(4),
+		&:last-of-type{
+			flex-basis: 65%;
+		}
+
+		&:hover{
+			-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+
+			a > h3{text-decoration: underline;}
+		}
+
+		a{
+			height: 100%;
+			padding: 1.2em;
+			color: darken($c-grey-m, 5%);
+
+			@extend %flex-column;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			.link-btn{
+				color: $c-white-p;
+				background: $c-blue-m;
+				border: 2px solid $c-blue-m;
+				padding: .5em;
+				border-radius: 8px;
+			}
+		}
+
+		@media screen and (max-width: 650px){
+			flex-basis: 45%;
+		}
+
+	}
+}
+
+// ==========================================
+// Footer
+
+footer{
+	@extend %screen;
+	@extend %flex-column;
+	width: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	background: $c-black-o;
+	color: $c-white-o;
+
+	.footer-links{
+		@extend %flex-between;
+		section{
+			flex-basis: 25%;
+		}
+
+		a{
+			color: $c-white-o;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& > div{
+		margin-bottom: 1em;
+	}
+}

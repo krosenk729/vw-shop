@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700");
+* {
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.2;
+  box-sizing: border-box; }
+
+header.site-header, .breadcrumbs, .site-nav, .banner-wrapper, main, .main, footer {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em; }
+  @media screen and (min-width: 900px) {
+    header.site-header, .breadcrumbs, .site-nav, .banner-wrapper, main, .main, footer {
+      padding-left: 4em;
+      padding-right: 4em; } }
+  @media screen and (min-width: 1400px) {
+    header.site-header, .breadcrumbs, .site-nav, .banner-wrapper, main, .main, footer {
+      padding-left: 6em;
+      padding-right: 6em; } }
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #F1F5F6;
+  color: #2C2D32; }
+
+.upper {
+  text-transform: uppercase; }
+
+header.site-header, .site-nav, .banner-wrapper .banner, footer .footer-links {
+  display: flex;
+  justify-content: space-between; }
+
+header.site-header .address-wrapper, .tile-wrapper .tile a, footer {
+  display: flex;
+  flex-direction: column; }
+
+fieldset input[type="text"] {
+  border: transparent;
+  background: transparent;
+  padding: .25em;
+  width: 80%; }
+  fieldset input[type="text"]:focus {
+    outline: none;
+    border-bottom: 1px solid #9eaab0; }
+
+header.site-header {
+  align-items: center;
+  margin-top: 16px;
+  background: #FFFFFF; }
+  header.site-header img {
+    height: 65px;
+    margin: .65em; }
+  header.site-header .address-wrapper {
+    flex-basis: 100%; }
+    header.site-header .address-wrapper div {
+      padding: .25em; }
+    header.site-header .address-wrapper i {
+      color: #1874B7;
+      margin-left: 5px;
+      margin-right: 5px; }
+
+.breadcrumbs {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #50525b;
+  font-weight: bold; }
+
+.site-nav {
+  background: #1874B7;
+  color: #FFFFFF;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  .site-nav a {
+    color: #FFFFFF;
+    padding-right: 1.7em; }
+    .site-nav a:hover {
+      text-decoration: underline; }
+  .site-nav .navcart {
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    margin-top: -1em;
+    margin-bottom: -1em;
+    padding: 1em; }
+
+.banner-wrapper {
+  overflow: hidden;
+  background: #1874B7;
+  color: #F1F5F6; }
+  .banner-wrapper .banner-title {
+    flex-basis: 50%;
+    align-self: center;
+    padding: 1em; }
+  .banner-wrapper .banner-image {
+    flex-basis: 50%;
+    max-width: 715px; }
+    .banner-wrapper .banner-image img {
+      margin-bottom: -1em;
+      width: 100%;
+      height: auto; }
+
+.tile-wrapper {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 1em auto 2em auto; }
+  .tile-wrapper .tile {
+    background: #FFFFFF;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    flex-basis: 32%;
+    flex-grow: 1;
+    border: 0;
+    margin: 4px;
+    height: 250px; }
+    .tile-wrapper .tile:nth-of-type(4), .tile-wrapper .tile:last-of-type {
+      flex-basis: 65%; }
+    .tile-wrapper .tile:hover {
+      -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); }
+      .tile-wrapper .tile:hover a > h3 {
+        text-decoration: underline; }
+    .tile-wrapper .tile a {
+      height: 100%;
+      padding: 1.2em;
+      color: #909ea5;
+      justify-content: space-between;
+      align-items: flex-start; }
+      .tile-wrapper .tile a .link-btn {
+        color: #FFFFFF;
+        background: #1874B7;
+        border: 2px solid #1874B7;
+        padding: .5em;
+        border-radius: 8px; }
+    @media screen and (max-width: 650px) {
+      .tile-wrapper .tile {
+        flex-basis: 45%; } }
+
+footer {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: #2C2D32;
+  color: #F1F5F6; }
+  footer .footer-links section {
+    flex-basis: 25%; }
+  footer .footer-links a {
+    color: #F1F5F6; }
+    footer .footer-links a:hover {
+      text-decoration: underline; }
+  footer > div {
+    margin-bottom: 1em; }
+
+/*# sourceMappingURL=style.css.map */
