@@ -1,11 +1,17 @@
 <header class="site-header">
 	<img class="brand-logo" src="/assets/logo.png" alt="">
 	<div class="address-wrapper">
-		<h4>{{ address.name }}</h4>
+		<h3>{{ address.name }}</h3>
 		<div>
+		<div class="address-component">
 		<i class="fas fa-map-marker-alt"></i>{{ address.street }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}
+		</div>
+		<div class="address-component">
 		<i class="fas fa-phone"></i>{{ address.phone }}
+		</div>
+		<div class="address-component">
 		<i class="fas fa-envelope"></i>{{ address.email }}
+		</div>
 		</div>
 	</div>
 	<fieldset>
