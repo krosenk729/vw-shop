@@ -55,13 +55,19 @@ header.site-header {
     margin: .65em; }
   header.site-header .address-wrapper {
     flex-basis: 100%; }
-    header.site-header .address-wrapper div {
-      padding: .25em; }
+    header.site-header .address-wrapper .address {
+      padding: .25em;
+      font-size: small;
+      display: flex;
+      flex-wrap: wrap; }
+      header.site-header .address-wrapper .address .address-component {
+        margin-right: .3em;
+        margin-bottom: .3em; }
     header.site-header .address-wrapper i {
       color: #1874B7;
       margin-left: 5px;
       margin-right: 5px; }
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 620px) {
     header.site-header {
       flex-wrap: wrap; } }
 
@@ -100,7 +106,7 @@ header.site-header {
       align-self: center;
       padding: 1em; }
       .banner-wrapper .banner .banner-title > p {
-        margin-bottom: 1em; }
+        margin-bottom: 1.5em; }
     .banner-wrapper .banner .banner-image {
       position: relative;
       max-width: 715px; }
