@@ -61,6 +61,9 @@ header.site-header {
       color: #1874B7;
       margin-left: 5px;
       margin-right: 5px; }
+  @media screen and (max-width: 580px) {
+    header.site-header {
+      flex-wrap: wrap; } }
 
 .breadcrumbs {
   padding-top: 1em;
