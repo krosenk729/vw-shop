@@ -8,12 +8,9 @@ $c-grey-m: #9eaab0;
 // ==========================================
 // Utility Classes
 
-
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
-
 * {
-	font-family: 'Work Sans', sans-serif;
-	line-height: 1.2;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
 	box-sizing: border-box;
 }
 
@@ -38,6 +35,10 @@ body{
 	flex-direction: column;
 	background: $c-white-o;
 	color: $c-black-o;
+}
+
+a{
+	color: $c-grey-m;
 }
 
 // ==========================================
@@ -156,22 +157,36 @@ header.site-header{
 	color: $c-white-o;
 
 	.banner{
-		@extend %flex-between;
-	}
+		// @extend %flex-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
-	.banner-title{
-		flex-basis: 50%;
-		align-self: center;
-		padding: 1em;
-	}
+		.banner-title{
+			flex-basis: 50%;
+			align-self: center;
+			padding: 1em;
+		}
 
-	.banner-image{
-		flex-basis: 50%;
-		max-width: 715px;
-		img{
-			margin-bottom: -1em;
-			width: 100%;
-			height: auto;
+		.banner-image{
+			position: relative;
+			max-width: 715px;
+
+			img{
+				margin-bottom: -1em;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: auto;
+			}
+
+		}
+		@media screen and (max-width: 600px){
+			display: block;
+
+			.banner-image{
+				display: none;
+			}
 		}
 	}
 }
@@ -190,7 +205,7 @@ main, .main{
 
 	.tile{
 		background: $c-white-p;
-		background-size: cover;
+		background-size: 70%;
 		background-position: center right;
 		background-repeat: no-repeat;
 
@@ -210,7 +225,9 @@ main, .main{
 			-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
 			box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
 
-			a > h3{text-decoration: underline;}
+			a > h3{
+				text-decoration: underline;
+			}
 		}
 
 		a{
@@ -233,6 +250,7 @@ main, .main{
 
 		@media screen and (max-width: 650px){
 			flex-basis: 45%;
+			background-size: 90%;
 		}
 
 	}

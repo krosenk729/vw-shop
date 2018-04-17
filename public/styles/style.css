@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700");
 * {
-  font-family: 'Work Sans', sans-serif;
-  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
   box-sizing: border-box; }
 
 header.site-header, .breadcrumbs, .site-nav, .banner-wrapper, main, .main, footer {
@@ -24,10 +23,13 @@ body {
   background: #F1F5F6;
   color: #2C2D32; }
 
+a {
+  color: #9eaab0; }
+
 .upper {
   text-transform: uppercase; }
 
-header.site-header, .site-nav, .banner-wrapper .banner, footer .footer-links {
+header.site-header, .site-nav, footer .footer-links {
   display: flex;
   justify-content: space-between; }
 
@@ -87,17 +89,28 @@ header.site-header {
   overflow: hidden;
   background: #1874B7;
   color: #F1F5F6; }
-  .banner-wrapper .banner-title {
-    flex-basis: 50%;
-    align-self: center;
-    padding: 1em; }
-  .banner-wrapper .banner-image {
-    flex-basis: 50%;
-    max-width: 715px; }
-    .banner-wrapper .banner-image img {
-      margin-bottom: -1em;
-      width: 100%;
-      height: auto; }
+  .banner-wrapper .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .banner-wrapper .banner .banner-title {
+      flex-basis: 50%;
+      align-self: center;
+      padding: 1em; }
+    .banner-wrapper .banner .banner-image {
+      position: relative;
+      max-width: 715px; }
+      .banner-wrapper .banner .banner-image img {
+        margin-bottom: -1em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: auto; }
+    @media screen and (max-width: 600px) {
+      .banner-wrapper .banner {
+        display: block; }
+        .banner-wrapper .banner .banner-image {
+          display: none; } }
 
 .tile-wrapper {
   display: flex;
@@ -107,7 +120,7 @@ header.site-header {
   margin: 1em auto 2em auto; }
   .tile-wrapper .tile {
     background: #FFFFFF;
-    background-size: cover;
+    background-size: 70%;
     background-position: center right;
     background-repeat: no-repeat;
     flex-basis: 32%;
@@ -136,7 +149,8 @@ header.site-header {
         border-radius: 8px; }
     @media screen and (max-width: 650px) {
       .tile-wrapper .tile {
-        flex-basis: 45%; } }
+        flex-basis: 45%;
+        background-size: 90%; } }
 
 footer {
   width: 100%;
