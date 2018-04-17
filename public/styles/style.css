@@ -96,6 +96,8 @@ header.site-header {
       flex-basis: 50%;
       align-self: center;
       padding: 1em; }
+      .banner-wrapper .banner .banner-title > p {
+        margin-bottom: 1em; }
     .banner-wrapper .banner .banner-image {
       position: relative;
       max-width: 715px; }
@@ -106,7 +108,7 @@ header.site-header {
         left: 0;
         height: 100%;
         width: auto; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 680px) {
       .banner-wrapper .banner {
         display: block; }
         .banner-wrapper .banner .banner-image {
