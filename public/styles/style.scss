@@ -165,6 +165,10 @@ header.site-header{
 			flex-basis: 50%;
 			align-self: center;
 			padding: 1em;
+
+			& > p{
+				margin-bottom: 1em;
+			}
 		}
 
 		.banner-image{
@@ -181,7 +185,7 @@ header.site-header{
 			}
 
 		}
-		@media screen and (max-width: 600px){
+		@media screen and (max-width: 680px){
 			display: block;
 
 			.banner-image{
