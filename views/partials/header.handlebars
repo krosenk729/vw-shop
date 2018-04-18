@@ -3,32 +3,51 @@
 	<div class="address-wrapper">
 		<h3>{{ address.name }}</h3>
 		<div class="address">
-		<div class="address-component">
-		<i class="fas fa-map-marker-alt"></i>{{ address.street }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}
-		</div>
-		<div class="address-component">
-		<i class="fas fa-phone"></i>{{ address.phone }}
-		</div>
-		<div class="address-component">
-		<i class="fas fa-envelope"></i>{{ address.email }}
-		</div>
+			<div class="address-component">
+				<i class="fas fa-map-marker-alt"></i>{{ address.street }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}
+			</div>
+			<div class="address-component">
+				<i class="fas fa-phone"></i>{{ address.phone }}
+			</div>
+			<div class="address-component">
+				<i class="fas fa-envelope"></i>{{ address.email }}
+			</div>
 		</div>
 	</div>
 	<fieldset>
 		<label for="search-box">
-		<i class="fas fa-search"></i>
-		<span class="sr-only">Search</span>
-		<input type="text" name="search" id="search-box" placeholder="Search">
+			<i class="fas fa-search"></i>
+			<span class="sr-only">Search</span>
+			<input type="text" name="search" id="search-box" placeholder="Search">
 		</label>
 	</fieldset>
 </header>
 <nav class="site-nav">
-	<div class="navbar">
-		<a href="#" class="upper">Select Vehicle <i class="fas fa-chevron-down"></i></a>
-		<a href="#" class="upper">Parts <i class="fas fa-chevron-down"></i></a>
-		<a href="#" class="upper">Accessories</a>
-		<a href="#" class="upper">VW DriverGear</a>
-		<a href="#" class="upper">Dealer Login</a>
+	<div class="navbar navbar-toggler">
+		<label for="show-menu" class="show-menu">
+			<div class="sr-only">Show Menu</div>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</label>
+		<input type="checkbox" id="show-menu" role="button">
+		<ul id="menu">
+			<li>
+				<a href="#" class="upper">Select Vehicle <i class="fas fa-chevron-down"></i></a>
+			</li>
+			<li>
+				<a href="#" class="upper">Parts <i class="fas fa-chevron-down"></i></a>
+			</li>
+			<li>
+				<a href="#" class="upper">Accessories</a>
+			</li>
+			<li>
+				<a href="#" class="upper">VW DriverGear</a>
+			</li>
+			<li>
+				<a href="#" class="upper">Dealer Login</a>
+			</li>
+		</ul>
 	</div>
 	<div class="navcart">
 		<i class="fas fa-shopping-cart"></i> 0

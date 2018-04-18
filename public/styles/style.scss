@@ -100,8 +100,8 @@ header.site-header{
 			flex-wrap: wrap;
 
 			.address-component{
-				margin-right: .3em;
-				margin-bottom: .3em;
+				margin-right: .4em;
+				margin-bottom: .4em;
 			}
 		}
 
@@ -142,10 +142,63 @@ header.site-header{
 
 	a{
 		color: $c-white-p;
-		padding-right: 1.7em;
 
 		&:hover{
 			text-decoration: underline;
+		}
+	}
+
+	.icon-bar{
+		display: inherit;
+		width: 25px;
+		margin: 4px;
+		height: 1px;
+		border: 2px solid $c-white-p;
+	}
+
+	.navbar{
+		// navbar top-level
+		li{
+			display:inline-block;
+			float: left;
+			padding-right: 1.7em;
+		}
+
+		// hide toggle by default
+		.show-menu {
+			color: $c-white-p;
+			display: none;
+		}
+
+		// hide checkbox
+		input[type=checkbox]{
+			display: none;
+			-webkit-appearance: none;
+		}
+
+		// show menu when invisible checkbox is checked
+		input[type=checkbox]:checked ~ #menu{
+			display: block;
+		}
+
+
+		@media screen and (max-width: 780px) {
+			// display toggle
+			.show-menu {
+				display:block;
+			}
+			// make all menu links full width
+			ul {
+				position: static;
+				display: none;
+				
+				li, 
+				li a {
+					width: 100%;
+					margin-top: 4px;
+					margin-bottom: 4px;
+				}
+			}
 		}
 	}
 
@@ -156,6 +209,7 @@ header.site-header{
 		margin-top: -1em;
 		margin-bottom: -1em;
 		padding: 1em;
+		min-width: 85px;
 	}
 }
 
@@ -221,7 +275,7 @@ main, .main{
 
 	.tile{
 		background: $c-white-p;
-		background-size: 70%;
+		background-size: 85%;
 		background-position: center right;
 		background-repeat: no-repeat;
 

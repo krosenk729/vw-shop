@@ -61,8 +61,8 @@ header.site-header {
       display: flex;
       flex-wrap: wrap; }
       header.site-header .address-wrapper .address .address-component {
-        margin-right: .3em;
-        margin-bottom: .3em; }
+        margin-right: .4em;
+        margin-bottom: .4em; }
     header.site-header .address-wrapper i {
       color: #1874B7;
       margin-left: 5px;
@@ -83,16 +83,45 @@ header.site-header {
   padding-top: 1em;
   padding-bottom: 1em; }
   .site-nav a {
-    color: #FFFFFF;
-    padding-right: 1.7em; }
+    color: #FFFFFF; }
     .site-nav a:hover {
       text-decoration: underline; }
+  .site-nav .icon-bar {
+    display: inherit;
+    width: 25px;
+    margin: 4px;
+    height: 1px;
+    border: 2px solid #FFFFFF; }
+  .site-nav .navbar li {
+    display: inline-block;
+    float: left;
+    padding-right: 1.7em; }
+  .site-nav .navbar .show-menu {
+    color: #FFFFFF;
+    display: none; }
+  .site-nav .navbar input[type=checkbox] {
+    display: none;
+    -webkit-appearance: none; }
+  .site-nav .navbar input[type=checkbox]:checked ~ #menu {
+    display: block; }
+  @media screen and (max-width: 780px) {
+    .site-nav .navbar .show-menu {
+      display: block; }
+    .site-nav .navbar ul {
+      position: static;
+      display: none; }
+      .site-nav .navbar ul li,
+      .site-nav .navbar ul li a {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 4px; } }
   .site-nav .navcart {
     border-left: 1px solid #FFFFFF;
     border-right: 1px solid #FFFFFF;
     margin-top: -1em;
     margin-bottom: -1em;
-    padding: 1em; }
+    padding: 1em;
+    min-width: 85px; }
 
 .banner-wrapper {
   overflow: hidden;
@@ -131,7 +160,7 @@ header.site-header {
   margin: 1em auto 2em auto; }
   .tile-wrapper .tile {
     background: #FFFFFF;
-    background-size: 70%;
+    background-size: 85%;
     background-position: center right;
     background-repeat: no-repeat;
     flex-basis: 32%;
